@@ -1,0 +1,11 @@
+vect_3x3_exp_from.obj
+vect_3x3_exp_to.obj
+vect_add.obj
+vect_adjm.obj
+vect_cross.obj
+vect_dot.obj
+vect_mag.obj
+vect_mat.obj
+vect_mult.obj
+vect_sub.obj
+vect_vector.obj
