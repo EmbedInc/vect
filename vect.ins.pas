@@ -5,22 +5,24 @@ const
   vect_exp3x3_comps_k = 15;            {number of values in expanded 3x3 xform}
 
 type
-  vect_2d_t = record                   {2D vector}
-    x: real;
-    y: real;
+  vect_2d_p_t = ^vect_2d_t;
+  vect_2d_t = record case integer of   {2D vector with array overlay}
+    1:(                                {separate named fields}
+      x: real;
+      y: real);
+    2:(                                {overlay array for arithmetic indexing}
+      coor: array[1..2] of real);
     end;
 
-  vect_2d_p_t =                        {pointer to a 2D vector}
-    ^vect_2d_t;
-
-  vect_3d_t = record                   {3D floating point vector}
-    x: real;
-    y: real;
-    z: real;
+  vect_3d_p_t = ^vect_3d_t;
+  vect_3d_t = record case integer of   {3D vector with array overlay}
+    1:(                                {separate named fields}
+      x: real;
+      y: real;
+      z: real);
+    2:(                                {overlay array for arithmetic indexing}
+      coor: array[1..3] of real);
     end;
-
-  vect_3d_p_t =                        {pointer to a 3D vector}
-    ^vect_3d_t;
 
   vect_3d_fp1_t = record               {3D vector using single prec for compactness}
     x: single;

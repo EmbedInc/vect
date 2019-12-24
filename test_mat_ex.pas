@@ -63,8 +63,8 @@ label
 
 begin
 again:                                 {back here on blank line}
-  file_read_text (conn_in,buf,stat);
-  sys_error_abort (stat,'file','read_input_text',nil,0);
+  file_read_text (conn_in, buf, stat);
+  sys_error_abort (stat, 'file', 'read_input_text', nil, 0);
   if buf.len <= 0 then goto again;
   p := 1;                              {init new BUF parse index}
   end;
@@ -82,8 +82,8 @@ var
   stat: sys_err_t;
 
 begin
-  string_token_fpm (buf,p,val,stat);
-  sys_error_abort (stat,'','',nil,0);
+  string_token_fpm (buf, p, val, stat);
+  sys_error_abort (stat, '', '', nil, 0);
   end;
 {
 ****************************
@@ -98,8 +98,8 @@ var
   stat: sys_err_t;
 
 begin
-  file_write_text (buf,conn_out,stat);
-  sys_error_abort (stat,'file','write_output_text',nil,0);
+  file_write_text (buf, conn_out, stat);
+  sys_error_abort (stat, 'file', 'write_output_text', nil, 0);
   buf.len := 0;                        {reset buffer to empty}
   end;
 {
@@ -123,9 +123,9 @@ begin
     8,                                 {field width}
     3);                                {digits below decimal point}
   if buf.len > 0 then begin            {not first token in buffer ?}
-    string_append1 (buf,' ');
+    string_append1 (buf, ' ');
     end;
-  string_append (buf,token);           {write number to output buffer}
+  string_append (buf, token);          {write number to output buffer}
   end;
 {
 ****************************
@@ -135,17 +135,17 @@ begin
 begin
   string_cmline_init;                  {init for reading command line}
 
-  string_cmline_token (token,stat);    {get input file name}
+  string_cmline_token (token, stat);   {get input file name}
   string_cmline_req_check (stat);
-  file_open_read_text (token,'',conn_in,stat); {try to open input file for read}
-  sys_msg_parm_vstr (msg_parm[1],token);
-  sys_error_abort (stat,'file','open_input_read_text',msg_parm,1);
+  file_open_read_text (token, '', conn_in, stat); {try to open input file for read}
+  sys_msg_parm_vstr (msg_parm[1], token);
+  sys_error_abort (stat, 'file', 'open_input_read_text', msg_parm, 1);
 
-  string_cmline_token (token,stat);    {get output file name}
+  string_cmline_token (token, stat);   {get output file name}
   string_cmline_req_check (stat);
-  file_open_write_text (token,'',conn_out,stat); {try to open output file for write}
-  sys_msg_parm_vstr (msg_parm[1],token);
-  sys_error_abort (stat,'file','open_output_write_text',msg_parm,1);
+  file_open_write_text (token, '', conn_out, stat); {try to open output file for write}
+  sys_msg_parm_vstr (msg_parm[1], token);
+  sys_error_abort (stat, 'file', 'open_output_write_text', msg_parm, 1);
 
   string_cmline_end_abort;             {no more tokens allowed on command line}
 {
@@ -168,7 +168,7 @@ begin
 {
 *   Convert the data.
 }
-  vect_3x3_exp_to (mat,ex,err);        {try to convert the data}
+  vect_3x3_exp_to (mat, ex, err);      {try to convert the data}
   if err then begin
     writeln ('Conversion not possible.');
     goto leave;
