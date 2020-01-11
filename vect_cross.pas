@@ -4,7 +4,7 @@
 }
 module vect_cross;
 define vect_cross;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 function vect_cross (                  {take a cross product of two vectors}
   in      v1: vect_3d_t;               {first input vector of cross product}

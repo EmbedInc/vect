@@ -5,9 +5,9 @@
 module vect_ftn_bounce;
 define vect_ftn_3x3_exp_from_ ;
 define vect_ftn_3x3_exp_to_ ;
-%include '/cognivision_links/dsee_libs/sys/sys.ins.pas';
-%include '/cognivision_links/dsee_libs/sys/sys_ftn.ins.pas';
-%include '/cognivision_links/dsee_libs/vect/vect.ins.pas';
+%include 'sys.ins.pas';
+%include 'sys_ftn.ins.pas';
+%include 'vect.ins.pas';
 
 type
   exp3x3_t = array[1..15] of sys_ftn_real_t;

@@ -12,7 +12,7 @@
 }
 module vect_3X3_EXP_TO;
 define vect_3x3_exp_to;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 procedure vect_3x3_exp_to (            {make expanded form of a 3x3 matrix}
   in      mat: vect_mat3x3_t;          {3x3 transformation matrix to expand}

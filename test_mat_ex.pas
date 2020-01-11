@@ -20,11 +20,11 @@
 *     scale_z
 }
 program test_mat_ex;
-%include '/cognivision_links/dsee_libs/sys/sys.ins.pas';
-%include '/cognivision_links/dsee_libs/util/util.ins.pas';
-%include '/cognivision_links/dsee_libs/string/string.ins.pas';
-%include '/cognivision_links/dsee_libs/file/file.ins.pas';
-%include '/cognivision_links/dsee_libs/vect/vect.ins.pas';
+%include 'sys.ins.pas';
+%include 'util.ins.pas';
+%include 'string.ins.pas';
+%include 'file.ins.pas';
+%include 'vect.ins.pas';
 
 const
   max_msg_parms = 1;                   {max parameters we can pass to a message}
@@ -32,9 +32,9 @@ const
 var
   conn_in, conn_out: file_conn_t;      {input/output file connection handles}
   token:                               {for parsing command line and input file}
-    %include '/cognivision_links/dsee_libs/string/string_treename.ins.pas';
+    %include '(cog)lib/string_treename.ins.pas';
   buf:                                 {one line input/output buffer}
-    %include '/cognivision_links/dsee_libs/string/string132.ins.pas';
+    %include '(cog)lib/string132.ins.pas';
   p: string_index_t;                   {input line parse index}
   mat: vect_mat3x3_t;                  {3x3 matrix}
   ex: vect_exp3x3_t;                   {expanded form of matrix}

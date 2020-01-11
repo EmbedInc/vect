@@ -4,7 +4,7 @@
 }
 module vect_mag;
 define vect_mag;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 function vect_mag (                    {find magnitude of a vector}
   in      v: vect_3d_t)                {input vector}

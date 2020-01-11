@@ -11,7 +11,7 @@ define vect_m3x4_mult;
 define vect_m3x4_rotate_x;
 define vect_m3x4_rotate_y;
 define vect_m3x4_rotate_z;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 {
 ****************************************************
 }

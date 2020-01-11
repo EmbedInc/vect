@@ -4,7 +4,7 @@
 }
 module vect_adjm;
 define vect_adjm;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 procedure vect_adjm (                  {adjust the magnitude of a vector}
   in out  v: vect_3d_t;                {vector to adjust magnitude of}

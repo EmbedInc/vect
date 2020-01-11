@@ -4,7 +4,7 @@
 }
 module vect_vector;
 define vect_vector;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 function vect_vector (                 {build a vector from 3 scalars}
   in      x: real;                     {X coor of vector}

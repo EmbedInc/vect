@@ -4,7 +4,7 @@
 }
 module vect_sub;
 define vect_sub;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 function vect_sub (                    {return subtraction of two vectors}
   in      v1: vect_3d_t;               {input vector to be subtracted from}

@@ -4,7 +4,7 @@
 }
 module vect_dot;
 define vect_dot;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 function vect_dot (                    {find dot product of two vectors}
   in      v1: vect_3d_t;               {first input vector}

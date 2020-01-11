@@ -14,7 +14,7 @@
 }
 module vect_3X3_EXP_FROM;
 define vect_3x3_exp_from;
-%include '/cognivision_links/dsee_libs/vect/vect2.ins.pas';
+%include 'vect2.ins.pas';
 
 procedure vect_3x3_exp_from (          {make 3x3 matrix from expanded representation}
   in      ex: vect_exp3x3_t;           {expanded representation of matrix}
