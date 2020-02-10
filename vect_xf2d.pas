@@ -2,6 +2,7 @@
 }
 module vect_xf2d;
 define vect_xf2d_xfpnt;
+define vect_xf2d_mult;
 %include 'vect2.ins.pas';
 {
 ********************************************************************************
