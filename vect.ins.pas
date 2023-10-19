@@ -81,6 +81,14 @@ type
 {
 *   Entry point definitions.
 }
+procedure vect_2d_unitize (            {unitize a 2D vector}
+  in out  v: vect_2d_t);               {will be returned unit length}
+  val_param; extern;
+
+procedure vect_3d_unitize (            {unitize a 3D vector}
+  in out  v: vect_3d_t);               {will be returned unit length}
+  val_param; extern;
+
 procedure vect_3x3_exp_from (          {make 3x3 matrix from expanded representation}
   in      ex: vect_exp3x3_t;           {expanded representation of matrix}
   out     mat: vect_mat3x3_t;          {resulting 3x3 transformation matrix}

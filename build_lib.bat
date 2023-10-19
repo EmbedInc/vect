@@ -9,6 +9,8 @@ call build_pasinit
 
 call src_insall %srcdir% %libname%
 
+call src_pas %srcdir% %libname%_2d %1
+call src_pas %srcdir% %libname%_3d %1
 call src_pas %srcdir% %libname%_3x3_exp_from %1
 call src_pas %srcdir% %libname%_3x3_exp_to %1
 call src_pas %srcdir% %libname%_add %1
